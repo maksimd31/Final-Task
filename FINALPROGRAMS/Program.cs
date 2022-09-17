@@ -12,7 +12,7 @@ Console.Clear();
 string[] array = new string[] { "1234", "156", "-2", "computer science", "-2","Kazan", "2",":-)" };
 //Создаем массив (строковый)
 
-void PrintArray(string[] arr) //Функция печати массива/и преребирает весь массив 
+void PrintArray(string[] arr) //Функция печати массива/и перебирает весь массив 
 {
     for (int i = 0; i < arr.Length; i++)
     {
@@ -22,14 +22,14 @@ void PrintArray(string[] arr) //Функция печати массива/и п
 }
 
 
-void Formation(string[] arr) // функия с условием/ если obect.Length <= 3 (объект меньше или равен 3) то 
+void Formation(string[] arr) // функция с условием/ если object.Length <= 3 (объект меньше или равен 3) Если есть объект то тогда создается новый массив такого же типа и в ячейку нового массива записывается значение ячейки первичного массива
 {
     for (int i = 0; i < arr.Length; i++)
     {
-        string obect = arr[i];
-        if (obect.Length <= 3)
+        string @object = arr[i];
+        if (@object.Length <= 3)
         {
-            arr[i] = obect;
+            arr[i] = @object;
     }
         else arr[i] = string.Empty;
     }
@@ -37,3 +37,5 @@ void Formation(string[] arr) // функия с условием/ если obect
 
 PrintArray(array);
 Formation(array);
+Console.Write("Новый массив из строк, длина которых меньше, либо равна 3 символам: ");
+PrintArray(array);
