@@ -10,9 +10,9 @@
 Console.Clear();
 
 string[] array = new string[] { "1234", "156", "-2", "computer science", "-2","Kazan", "2",":-)" };
-//Создаем массив 
+//Создаем массив (строковый)
 
-void PrintArray(string[] arr) //Функция печати массива 
+void PrintArray(string[] arr) //Функция печати массива/и преребирает весь массив 
 {
     for (int i = 0; i < arr.Length; i++)
     {
@@ -21,4 +21,19 @@ void PrintArray(string[] arr) //Функция печати массива
     Console.WriteLine();
 }
 
+
+void Formation(string[] arr) // функия с условием/ если obect.Length <= 3 (объект меньше или равен 3) то 
+{
+    for (int i = 0; i < arr.Length; i++)
+    {
+        string obect = arr[i];
+        if (obect.Length <= 3)
+        {
+            arr[i] = obect;
+    }
+        else arr[i] = string.Empty;
+    }
+}
+
 PrintArray(array);
+Formation(array);
